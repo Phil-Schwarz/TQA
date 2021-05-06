@@ -1,0 +1,22 @@
+05/05
+- tried embedding vector approach explained in ZeroQA
+
+- tried selecting top 10 facts with max 3 facts per answer -> worked good for sample
+
+- tried creating dataloader for transformer model and retrieve facts for each question --> extremely long runtime (maybe unicluster will help, but still over 3h without result)
+  - aborted test and went to bed
+  
+06/05
+
+- tried to optimize code for better speed, after 2h still running (calculated time was 3h) --> aborted to try next approach
+  - not tried to reduce search_k, which will worsen results but lead to faster runtime, maybe test results for this later  
+  
+- tried to retrieve top 10 facts for only question embedding --> much faster
+
+- tried to figure out best interface approach for downstream transformer model (filtering 10 best for q + all a, best 3 for each q+a, etc)
+  - result after discussion: KISS -> simple interface, take a string and the number of wanted facts, return list of strings in descending order of importance
+  
+Todo: 
+- clean up code
+- create indexed database with q, q+a and q + all a already embedded and 10 facts retrieved for each combination -> helps with calculation time later, only need to load
+- try different transformer embedding

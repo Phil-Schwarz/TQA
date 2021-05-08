@@ -1,6 +1,6 @@
 # Bert and other variants on OpenBook dataset
 ## Explanations of `Albert`Folder
-Only Experiment 7 uses pre-trained weights **albert-large-v2**, other expriments use pre-trained weights **albert-base-v2**. More information see please under [this link]{https://huggingface.co/albert-base-v2}.
+Only Experiment 7 uses pre-trained weights **albert-large-v2**, other expriments use pre-trained weights **albert-base-v2**. More information see please under [this link](https://huggingface.co/albert-base-v2).
 
 ## Explanations of `Bert`Folder
 All experiments with Bert model use pre-trained weights **bert-base-uncased**.

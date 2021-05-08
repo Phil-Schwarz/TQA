@@ -21,6 +21,10 @@ All experiments with DistilBert model use pre-trained weights **distilbert-base-
     - Experiment uses the context or fact from OpenBookQA dataset will not be marked. If Experiment uses facts from the Document Retriever by Phillippe, it will be additionally marked with *. For example, A8* means that it uses facts from the Document Retriever part.
 4. Epoch
     - For all experiments, the epoch will be set to 100. 
+5. Learning rate
+    - According to ZeroQA paper, the learning rate is been chosen with 2e-5.
+6. Optimizer
+    - Acoording to ZeroQA paper, the optimizer is been chosen Adam.
 5. Accuracy score on test dataset
     - The accuracy on the test dataset is calculated with the weights which has a lowest loss on validation dataset. 
 

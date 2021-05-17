@@ -1,0 +1,53 @@
+- started implementing combiner network for passing outputs from different tansformer models to generate answers
+- looked into ZeroQA approach for implementation and model details
+- trying to understand KVAttention Layer
+- (for later comparison: implement weighted mean of outputs)
+- come up with all inputs the neural network need by sunday
+
+
+- played around with LSTM RNN Models
+- generated random test data to train neural network
+
+Model summary:
+
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+answer_a (InputLayer)           [(None, 2, 3)]       0                                            
+__________________________________________________________________________________________________
+answer_b (InputLayer)           [(None, 2, 3)]       0                                            
+__________________________________________________________________________________________________
+answer_c (InputLayer)           [(None, 2, 3)]       0                                            
+__________________________________________________________________________________________________
+answer_d (InputLayer)           [(None, 2, 3)]       0                                            
+__________________________________________________________________________________________________
+time_distributed_1 (TimeDistrib (None, 2, 32)        128         answer_a[0][0]                   
+                                                                 answer_b[0][0]                   
+                                                                 answer_c[0][0]                   
+                                                                 answer_d[0][0]                   
+__________________________________________________________________________________________________
+spatial_dropout_1 (SpatialDropo (None, 2, 32)        0           time_distributed_1[0][0]         
+                                                                 time_distributed_1[1][0]         
+                                                                 time_distributed_1[2][0]         
+                                                                 time_distributed_1[3][0]         
+__________________________________________________________________________________________________
+lstm_11 (LSTM)                  (None, 2, 32)        8320        spatial_dropout_1[0][0]          
+                                                                 spatial_dropout_1[1][0]          
+                                                                 spatial_dropout_1[2][0]          
+                                                                 spatial_dropout_1[3][0]          
+__________________________________________________________________________________________________
+concatenate_answers (Concatenat (None, 2, 128)       0           lstm_11[0][0]                    
+                                                                 lstm_11[1][0]                    
+                                                                 lstm_11[2][0]                    
+                                                                 lstm_11[3][0]                    
+__________________________________________________________________________________________________
+dense_2 (Dense)                 (None, 2, 32)        4128        concatenate_answers[0][0]        
+__________________________________________________________________________________________________
+dropout_1 (Dropout)             (None, 2, 32)        0           dense_2[0][0]                    
+__________________________________________________________________________________________________
+dense_3 (Dense)                 (None, 2, 32)        1056        dropout_1[0][0]                  
+__________________________________________________________________________________________________
+dropout_2 (Dropout)             (None, 2, 32)        0           dense_3[0][0]                    
+__________________________________________________________________________________________________
+dense_4 (Dense)                 (None, 2, 32)        1056        dropout_2[0][0]                  
+__________________________________________________________________________________________________
+dense_5 (Dense)                 (None, 2, 4)         132         dense_4[0][0]  

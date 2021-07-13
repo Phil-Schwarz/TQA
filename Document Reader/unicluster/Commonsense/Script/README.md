@@ -17,6 +17,6 @@ LEARNING_RATE = 5e-6, base model is the model from `dr_ex01-albert-commonsense-e
 LEARNING_RATE = 5e-6, base model is the model from `dr_ex01-albert-commonsense-epoch=07-val_acc_epoch=0.609.ckpt`, it has highest accuracy score on dev dataset.
 
 ## Result analysis
-1. For `Ex01.ipynb`, the model with lowest loss value `dr_ex01-albert-commonsense-epoch=01-val_loss_epoch=1.066.ckpt` has accuracy score 60.9% on dev dataset. The model with highest accuracy score `dr_ex01-albert-commonsense-epoch=07-val_acc_epoch=0.609.ckpt` has accuracy score 56.4% on dev dataset.
-2. For `Ex02.ipynb`, the model is `dr_ex02-albert-commonsense-epoch=01-val_loss_epoch=1.437.ckpt`, it has accuracy score 59.6% on dev dataset.
-3. For `Ex03.ipynb`, the model is `dr_ex03-albert-commonsense-epoch=01-val_acc_epoch=0.574.ckpt`, it has accuracy score 61.5% on dev dataset.
+1. For `Ex01.ipynb`, the best model with lowest loss value `dr_ex01-albert-commonsense-epoch=01-val_loss_epoch=1.066.ckpt` has accuracy score 60.9% on dev dataset. The model with highest accuracy score `dr_ex01-albert-commonsense-epoch=07-val_acc_epoch=0.609.ckpt` has accuracy score 56.4% on dev dataset.
+2. For `Ex02.ipynb`, the best model is `dr_ex02-albert-commonsense-epoch=01-val_loss_epoch=1.437.ckpt`, it has accuracy score 59.6% on dev dataset.
+3. For `Ex03.ipynb`, the best model is `dr_ex03-albert-commonsense-epoch=01-val_acc_epoch=0.574.ckpt`, it has accuracy score 61.5% on dev dataset.

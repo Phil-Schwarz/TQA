@@ -2,11 +2,11 @@
 
 ## Results on the dev dataset 
 1. TPU or GPU
-    All experiments are made with Google Colab using TPU from Google.
+    - All experiments are made with Google Colab using TPU from Google.
 2. Notation of Albertmodel
-    - All Experiments with AlbertModel will be in the following with the notation A. For example, E1 stands for Experiment 1 which corresponding to Folder E1.
+    - All Experiments using AlbertModel `base-albert-v2` will be in the following with the notation E. For example, E1 stands for Experiment 1 which corresponding to Folder E1.
 4. Epoch
-    - Expect Experiment 6, the epoch for all other experiments is set to 10. 
+    - Expect Experiment 5, the epoch for all other experiments is set to 10. 
     - For Experiment 5, the epoch is 20.
 5. Batch size and max length of tokenizer
     - Subject to the limited computational resource, batch size is set to 8.

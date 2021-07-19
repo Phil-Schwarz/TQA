@@ -1,6 +1,6 @@
 # Albert models on CosmosQA dataset
 
-## Results on the test dataset 
+## Results on the dev dataset 
 1. TPU or GPU
     All experiments are made with Google Colab using TPU from Google.
 2. Notation of Albertmodel
